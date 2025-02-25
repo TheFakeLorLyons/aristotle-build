@@ -11,8 +11,9 @@
                                 ch.qos.logback/logback-classic       {:mvn/version "1.2.11"}}
                   :main-opts   ["-m" "cognitect.test-runner"]
                   :exec-fn     cognitect.test-runner.api/test}
-           :build {:deps {io.github.clojure/tools.build {:git/tag "v0.10.7" :git/sha "573711e"}}
+           :build {:deps {io.github.clojure/tools.build {:git/tag "v0.10.7" :git/sha "573711e"}
+                          #_#_slipset/deps-deploy {:mvn/version "RELEASE"}}
                    :ns-default build}}
- :mvn/repos {"clojars" {:url "https://repo.clojars.org/"
-             :username  #env CLOJARS_USERNAME
-             :password #env CLOJARS_PASSWORD}}}
+ #_#_:mvn/repos {"clojars" {:url "https://repo.clojars.org/" 
+                        :username #env CLOJARS_USERNAME
+                        :password #env CLOJARS_PASSWORD}}}
